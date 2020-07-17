@@ -1,10 +1,20 @@
 function feetToMile(feet){
-    var mile = feet*0.000189394;
+    if(feet < 0){
+        var mile = 'ERROR![NB:Length or distance cannot be negative]'
+    }
+    else{
+        mile = feet*0.000189394;
+    }
     return mile;
 }
 
 function woodCalculator(chair, table, bed) {
-    var wood = (chair * 1) + (table * 3) + (bed * 5);
+    if(chair < 0 || table < 0 || bed < 0){
+        var wood = 'ERROR![NB:Quantity cannot be negative]'
+    }
+    else{
+        var wood = (chair * 1) + (table * 3) + (bed * 5);
+    }
     return wood;
 }
 
